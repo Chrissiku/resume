@@ -1,5 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ff7613;
+  --secondary-color: #727171;
+  --ternary-color: #fff;
+  --background-color: #000;
+  --background-variation: #070707;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: Inter, sans-serif;
+  color: var(--ternary-color);
+}
+
+a {
+  color: var(--ternary-color);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+.container {
+  max-width: 100%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 0 auto;
+  padding: 5rem;
+  background-color: var(--background-variation);
+}
+
+.profile {
+  grid-columns: 1/-1;
+}
+
+.profile_container {
+  display: flex;
+  gap: 2rem;
+}
+.profile_image {
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.first_name {
+  color: var(--ternary-color);
+  font-weight: 200;
+  font-size: clamp(2rem, 8vw, 4rem);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: -0.8rem;
+}
+
+.last_name {
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 15vw, 7rem);
+  text-transform: uppercase;
+  display: block;
+}
+
+.profile_title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.download_Button {
+  display: block;
+  text-decoration: underline;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+}
+.download_Button:hover {
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    grid-template-columns: 1fr;
+    padding: 3rem;
+    gap: 7rem;
+  }
+
+  .profile {
+    margin-bottom: 0;
+  }
+
+  .profile_container {
+    flex-direction: column;
+  }
 }
